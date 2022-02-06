@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "926130619950",
+    "firebase_url": "https://chart-28857-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "chart-28857",
+    "storage_bucket": "chart-28857.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926130619950:android:6e335475381089157d41bf",
+        "android_client_info": {
+          "package_name": "com.chartapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926130619950-h455cpui49h025ss6gb92snf2h6nbmo7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chartapp",
+            "certificate_hash": "e373fa19868cebb8a216825afefe6a52575decd7"
+          }
+        },
+        {
+          "client_id": "926130619950-jhv6hcbetp45dffctef0v0v9rig25bht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD74ULwMb_23vHaLgUIMKbUCSfzaMsme1U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926130619950-jhv6hcbetp45dffctef0v0v9rig25bht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

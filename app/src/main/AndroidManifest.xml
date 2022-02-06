@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.chartapp" >
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/phone_foreground"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/phone_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ChartApp" >
+        <activity
+            android:name=".Bottom_frag"
+            android:exported="false"
+            android:label="@string/title_activity_bottom_frag" />
+        <activity
+            android:name=".Bottom_nav"
+            android:exported="false"
+            android:label="@string/title_activity_bottom_nav" />
+        <activity
+            android:name=".bottom.Bottom_fragment"
+            android:exported="false"
+            android:label="@string/title_activity_bottom_fragment" />
+        <activity
+            android:name=".bottom.Other_bottom"
+            android:exported="false" />
+        <activity
+            android:name=".bottom.Soft_bottom"
+            android:exported="false" />
+        <activity
+            android:name=".bottom.Bottom"
+            android:exported="false" />
+        <activity
+            android:name=".phones.oppo.Oppo_catalog"
+            android:exported="false"
+            android:label="Oppo" />
+        <activity
+            android:name=".phones.nokia.Nokia_catalog"
+            android:exported="false"
+            android:label="Nokia" />
+        <activity
+            android:name=".phones.meizu.Meizu_catalog"
+            android:exported="false"
+            android:label="Meizu" />
+        <activity
+            android:name=".phones.lg.Lg_catalog"
+            android:exported="false"
+            android:label="Lg" />
+        <activity
+            android:name=".phones.lenovo.Lenovo_catalog"
+            android:exported="false"
+            android:label="Lenovo" />
+        <activity
+            android:name=".phones.blackberry.Blackberry_catalog"
+            android:exported="false"
+            android:label="Blackberry" />
+        <activity
+            android:name=".phones.huawei.Huawei_catalog"
+            android:exported="false"
+            android:label="Huawei" />
+        <activity
+            android:name=".phones.samsung.Samsung_catalog"
+            android:exported="false"
+            android:label="Samsung" />
+        <activity
+            android:name=".phones.apple.Apple_catalog"
+            android:exported="false"
+            android:label="Apple" />
+        <activity
+            android:name=".phones.asus.Asus_catalog"
+            android:exported="false"
+            android:label="Asus" />
+        <activity
+            android:name=".db.Db"
+            android:exported="false" />
+        <activity
+            android:name=".phones.xiaomi.XiaomiCatalog"
+            android:exported="false"
+            android:label="Xiaomi" />
+        <activity
+            android:name=".phones.Phone"
+            android:exported="false"
+            android:label="Телефоны"
+            android:theme="@style/Theme.ChartApp" />
+        <activity
+            android:name=".mainboard.Mainboard"
+            android:exported="false"
+            android:label="Материнские платы" />
+        <activity
+            android:name=".laptop.Laptop"
+            android:exported="false"
+            android:label="Ноутбуки" />
+        <activity
+            android:name=".Splash"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Главное меню" />
+    </application>
+
+</manifest>

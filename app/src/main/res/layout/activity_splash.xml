@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blue_back"
+    android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+    tools:context=".Splash" >
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Just Fix It"
+        android:textColor="#FDFAFA"
+        android:textSize="48sp" />
+
+    <TextView
+        android:id="@+id/app_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Найдётся любая схема"
+        android:textColor="#F3F0F0"
+        android:textSize="34sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="395dp"
+        app:srcCompat="@drawable/book" />
+
+    <TextView
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="pcbchart.ru"
+        android:textColor="#F6F5F5"
+        android:textSize="34sp" />
+</LinearLayout>
