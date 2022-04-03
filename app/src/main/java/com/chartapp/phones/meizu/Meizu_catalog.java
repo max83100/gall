@@ -1,6 +1,7 @@
 package com.chartapp.phones.meizu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -16,7 +17,6 @@ import android.widget.Toast;
 import com.chartapp.R;
 import com.chartapp.phones.Adapter;
 import com.chartapp.phones.Data;
-import com.chartapp.phones.apple.AppleDatabaseHelper;
 
 import java.util.ArrayList;
 
@@ -35,6 +35,9 @@ public class Meizu_catalog extends AppCompatActivity {
         myDB = new MeizuDatabaseHelper(this);
         list = new ArrayList<>();
         showData(recyclerView);
+        Toolbar toolbar = findViewById(R.id.toolbar_phone);
+        setSupportActionBar(toolbar);
+
 
     }
     public void showData(View view){

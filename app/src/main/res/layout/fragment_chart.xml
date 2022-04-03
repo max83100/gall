@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".bottom.ChartFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chose_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Выберите категорию"
+                android:textColor="#0B0B0B"
+                android:textSize="24sp"
+                tools:ignore="MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/phoneView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:srcCompat="@drawable/phones" />
+
+            <TextView
+                android:id="@+id/phonetext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Телефоны"
+                android:textColor="#101010"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/notebookView"
+                app:srcCompat="@drawable/laptope"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:onClick="onClick" />
+
+            <TextView
+                android:id="@+id/notebooktext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Ноутбуки"
+                android:textColor="#101010"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/mainboardView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:onClick="onClick"
+                app:srcCompat="@drawable/mainboard" />
+
+            <TextView
+                android:id="@+id/mainboardtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Материнские платы"
+                android:textColor="#101010"
+                android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/weldingView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:onClick="onClick"
+                app:srcCompat="@drawable/welding" />
+
+            <TextView
+                android:id="@+id/weldingtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Сварочное оборудование"
+                android:textColor="#101010"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</FrameLayout>

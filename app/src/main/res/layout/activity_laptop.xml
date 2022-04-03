@@ -8,12 +8,20 @@
     android:orientation="vertical"
     tools:context=".laptop.Laptop">
 
-    <TextView
-        android:id="@+id/textView"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_laptop"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_700"
+        android:elevation="4dp">
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/laptop_recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Находится в разработке и будет доступен в следующем обновлении"
-        android:textColor="#0B0B0B"
-        android:textSize="24sp" />
+        android:layout_margin="2dp"
+        android:layout_weight="1">
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

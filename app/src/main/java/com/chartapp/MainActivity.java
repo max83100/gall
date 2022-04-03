@@ -9,6 +9,7 @@ import android.view.View;
 import com.chartapp.laptop.Laptop;
 import com.chartapp.mainboard.Mainboard;
 import com.chartapp.phones.Phone;
+import com.chartapp.welding.Welding;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -36,6 +37,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.mainboardView:
                 intent = new Intent(this, Mainboard.class);
+                break;
+            case R.id.weldingView:
+                intent = new Intent(this, Welding.class);
                 break;
         }
         startActivity(intent);

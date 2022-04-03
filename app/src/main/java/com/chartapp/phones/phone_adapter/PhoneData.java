@@ -2,6 +2,8 @@ package com.chartapp.phones.phone_adapter;
 
 import com.chartapp.R;
 
+import java.io.InputStream;
+
 public class PhoneData {
     String Name,  count;
     int imageView;
@@ -14,6 +16,7 @@ public class PhoneData {
         this.imageView = imageView;
         this.count = count;
     }
+
 
 
     public String getName() {

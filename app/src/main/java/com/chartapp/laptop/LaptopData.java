@@ -1,33 +1,35 @@
 package com.chartapp.laptop;
 
+import java.io.InputStream;
+
 public class LaptopData {
-    private String productName;
-    private String productDate;
+    String Name, count;
+    int imageView;
 
-
-    public LaptopData(String productName, String productDate) {
-        this.productName = productName;
-        this.productDate = productDate;
-
+    public LaptopData() {
     }
 
-    public String getproductName() {
-        return productName;
+    public LaptopData(int imageView, String Name, String count) {
+        this.Name = Name;
+        this.imageView = imageView;
+        this.count = count;
     }
 
-    public void setproductName(String productName) {
-        this.productName = productName;
-    }
-
-    public String getproductDate() {
-        return productDate;
-    }
-
-    public void setproductDate(String productDate) {
-        this.productDate = productDate;
+    public LaptopData(InputStream open, String compal, String count) {
     }
 
 
+    public String getName() {
+        return Name;
+    }
+
+    public String getCount() {
+        return count;
+    }
+
+    public int getImageView() {
+        return imageView;
+    }
 }
 
 

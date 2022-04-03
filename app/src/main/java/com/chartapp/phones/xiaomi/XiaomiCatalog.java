@@ -1,6 +1,7 @@
 package com.chartapp.phones.xiaomi;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -39,10 +40,8 @@ public class XiaomiCatalog extends AppCompatActivity {
         myDB = new XiaomiDatabaseHelper(this);
         list = new ArrayList<>();
         showData(recyclerView);
-
-
-
-
+        Toolbar toolbar = findViewById(R.id.toolbar_phone);
+        setSupportActionBar(toolbar);
 
     }
     public void showData(View view){

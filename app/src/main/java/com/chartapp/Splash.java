@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.chartapp.bottom.Bottom;
 import com.chartapp.phones.Phone;
 
 
@@ -32,7 +33,7 @@ public class Splash extends AppCompatActivity {
                         sleep(100);
                         logoTimer = logoTimer +100;
                     };
-                    startActivity(new Intent(getApplicationContext(), Phone.class));
+                    startActivity(new Intent(getApplicationContext(), Bottom.class));
                 }
                 catch (InterruptedException e)
                 {

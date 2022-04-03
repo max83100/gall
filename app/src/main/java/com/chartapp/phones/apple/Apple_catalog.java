@@ -1,9 +1,11 @@
 package com.chartapp.phones.apple;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,7 +18,6 @@ import android.widget.Toast;
 import com.chartapp.R;
 import com.chartapp.phones.Adapter;
 import com.chartapp.phones.Data;
-import com.chartapp.phones.xiaomi.XiaomiDatabaseHelper;
 
 import java.util.ArrayList;
 
@@ -26,6 +27,7 @@ public class Apple_catalog extends AppCompatActivity {
     Adapter customAdapter;
     RecyclerView recyclerView;
 
+    @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,9 @@ public class Apple_catalog extends AppCompatActivity {
         myDB = new AppleDatabaseHelper(this);
         list = new ArrayList<>();
         showData(recyclerView);
+        Toolbar toolbar = findViewById(R.id.toolbar_phone);
+        setSupportActionBar(toolbar);
+
     }
     public void showData(View view){
         try {
