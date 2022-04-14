@@ -40,7 +40,7 @@ public class ChartFragment extends Fragment {
 
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_chart, container, false);
-
+        getActivity().setTitle("Каталог схем");
         ImageView laptop = view.findViewById(R.id.notebookView);
         ImageView mainboard = view.findViewById(R.id.mainboardView);
         ImageView phone = view.findViewById(R.id.phoneView);

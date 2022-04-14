@@ -15,251 +15,335 @@
         android:theme="@style/Theme.ChartApp">
         <activity
             android:name=".welding.wester.WesterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Wester"/>
         <activity
             android:name=".welding.torros.TorrosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Torros"/>
         <activity
             android:name=".welding.thermal.ThermalActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Thermal Dynamics"/>
         <activity
             android:name=".welding.telwin.TelwinActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Telwin"/>
         <activity
             android:name=".welding.sturm.SturmActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Sturm"/>
         <activity
             android:name=".welding.start.StartActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Start"/>
         <activity
             android:name=".welding.sip.SipActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Sip"/>
         <activity
             android:name=".welding.selma.SelmaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Selma"/>
         <activity
             android:name=".welding.russia.RussiaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Российские произовдители"/>
         <activity
             android:name=".welding.redbo.RedboActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Redbo"/>
         <activity
             android:name=".welding.quattro.QuattroActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Quattro Elementi"/>
         <activity
             android:name=".welding.profhelpet.ProfhelperActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Profihelper"/>
         <activity
             android:name=".welding.nebula.NebulaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Nebula"/>
         <activity
             android:name=".welding.murex.MurexActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Murex"/>
         <activity
             android:name=".welding.migatronic.MigatronicActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Migatronic"/>
         <activity
             android:name=".welding.lincoln.LincolnActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Lincoln"/>
         <activity
             android:name=".welding.kende.KendeActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Kende"/>
         <activity
             android:name=".welding.kemppi.KemppiActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Kemppi"/>
         <activity
             android:name=".welding.ine.IneActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Ine"/>
         <activity
             android:name=".welding.hyperterm.HypertermActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Hyperterm"/>
         <activity
             android:name=".welding.hitachi.HitachiActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Hitachi"/>
         <activity
             android:name=".welding.gys.GysActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Gys"/>
         <activity
             android:name=".welding.fubag.FubagActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Fubag"/>
         <activity
             android:name=".welding.fronius.FroniusActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Fronius"/>
         <activity
             android:name=".welding.foxweld.FoxweldActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Foxweld"/>
         <activity
             android:name=".welding.ewm.EwmActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Ewm"/>
         <activity
             android:name=".welding.esab.EsabActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Esab"/>
         <activity
             android:name=".welding.edon.EdonActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Edon"/>
         <activity
             android:name=".welding.deca.DecaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Deca"/>
         <activity
             android:name=".welding.china.ChinaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Китайские производители"/>
         <activity
             android:name=".welding.cemont.CemontActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Cemont"/>
         <activity
             android:name=".welding.cebora.CeboraActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Cebora"/>
         <activity
             android:name=".welding.brima.BrimaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Brima"/>
         <activity
             android:name=".welding.bestweld.BestweldActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Bestweld"/>
         <activity
             android:name=".welding.blueweld.BlueweldActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Blueweld"/>
         <activity
             android:name=".welding.aurora.AuroraActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Aurora"/>
         <activity
             android:name=".welding.aotai.AotaiActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Aotai"/>
         <activity
             android:name=".welding.ciklon.CiklonActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Циклон"/>
         <activity
             android:name=".welding.forsazh.ForsazhActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Форсаж"/>
         <activity
             android:name=".welding.feb.FebActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="ФЕБ"/>
         <activity
             android:name=".welding.torus.TorusActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Торус"/>
         <activity
             android:name=".welding.technotron.TechnotronActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Технотрон"/>
         <activity
             android:name=".welding.termit.TermitActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Термит"/>
         <activity
             android:name=".welding.sputnik.SputnikActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Спутник"/>
         <activity
             android:name=".welding.svarog.SvarogActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Сварог"/>
         <activity
             android:name=".welding.rikon.RikonActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Рикон"/>
         <activity
             android:name=".welding.resanta.ResantaActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Ресанта"/>
         <activity
             android:name=".welding.pulsar.PulsarActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Пульсар"/>
         <activity
             android:name=".welding.piton.PitonActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Питон"/>
         <activity
             android:name=".welding.pdg.PdgActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="ПДГ"/>
         <activity
             android:name=".welding.neon.NeonActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Неон"/>
         <activity
             android:name=".welding.mangust.MangustActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Мангуст"
+            />
         <activity
             android:name=".welding.linkor.LinkorActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Линкор"/>
+
         <activity
             android:name=".welding.kontur.KonturActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Контур"/>
         <activity
             android:name=".welding.kalibr.KalibrActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Калибр"/>
         <activity
             android:name=".welding.gladiator.GladiatorActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Гладиатор"/>
         <activity
             android:name=".welding.solaris.SolarisActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Solaris"/>
         <activity
             android:name=".welding.ptk.PtkActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="ПТК"/>
         <activity
             android:name=".welding.kedr.KedrActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Кедр"/>
         <activity
             android:name=".welding.Welding"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Сварочное оборудование"/>
         <activity
             android:name=".laptop.sony.Sony_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Sony"/>
         <activity
             android:name=".laptop.samsung.Samsung_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Samsung"/>
         <activity
             android:name=".laptop.roverbook.Roverbook_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Roverbook"/>
         <activity
             android:name=".laptop.packardbell.Packard_catalog_laptop"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Packard Bell"/>
         <activity
             android:name=".laptop.lg.Lg_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Lg"/>
         <activity
             android:name=".laptop.lenovo.Lenovo_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Lenovo"/>
         <activity
             android:name=".laptop.hp.Hp_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Hp"/>
         <activity
             android:name=".laptop.dell.Dell_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Dell"/>
         <activity
             android:name=".laptop.gericom.Gericom_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Gericom"/>
         <activity
             android:name=".laptop.gateway.Gateway_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Gateway"/>
         <activity
             android:name=".laptop.fujitsu.Fujitsu_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Fujitsu"/>
         <activity
             android:name=".laptop.dns.Dns_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Dns"/>
         <activity
             android:name=".laptop.compaq.Compaq_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Compaq"/>
         <activity
             android:name=".laptop.clevo.Clevo_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Clevo"/>
         <activity
             android:name=".laptop.benq.Benq_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Benq"/>
         <activity
             android:name=".laptop.aristo.Aristo_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Aristo"/>
         <activity
             android:name=".laptop.apple.Apple_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Apple"/>
         <activity
             android:name=".laptop.asus.Asus_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Asus"/>
         <activity
             android:name=".laptop.acer.Acer_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Acer"/>
         <activity
             android:name=".laptop.compal.Compal_laptop_catalog"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Compal"/>
         <activity
             android:name=".bottom.Bottom"
-            android:exported="false" />
+            android:exported="false"
+            />
         <activity
             android:name=".phones.oppo.Oppo_catalog"
             android:exported="false"
-            android:label="Oppo" />
+            android:label="Oppo"
+            />
         <activity
             android:name=".phones.nokia.Nokia_catalog"
             android:exported="false"

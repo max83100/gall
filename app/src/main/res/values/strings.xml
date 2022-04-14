@@ -10,7 +10,7 @@
 
     <string name="menu_home">Схемы</string>
     <string name="menu_gallery">Софт</string>
-    <string name="menu_slideshow">Меню</string>
+    <string name="menu_slideshow">Контакты</string>
     <string name="title_activity_navigation2">NavigationActivity2</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">chart</string>

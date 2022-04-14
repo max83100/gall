@@ -14,8 +14,8 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.SearchView;
 
 import com.chartapp.R;
-import com.chartapp.phones.phone_adapter.PhoneAdapter;
-import com.chartapp.phones.phone_adapter.PhoneData;
+import com.chartapp.welding.WeldingAdapter;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +31,11 @@ public class Welding extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welding);
         fillExampleList();
-        setUpRecyclerView();
+        try {
+            setUpRecyclerView();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         Toolbar toolbar = findViewById(R.id.welding_toolbar);
         setSupportActionBar(toolbar);
 
@@ -54,7 +58,7 @@ public class Welding extends AppCompatActivity {
         exampleList.add(new WeldingData(R.drawable.pulsar, "Пульсар", "Количество схем - "+2));
         exampleList.add(new WeldingData(R.drawable.resanta, "Ресанта", "Количество схем - "+28));
         exampleList.add(new WeldingData(R.drawable.empty, "Рикон", "Количество схем - "+1));
-        exampleList.add(new WeldingData(R.drawable.svarog, "Сварог", "Количество схем - "+9));
+        exampleList.add(new WeldingData(R.drawable.svarog, "Сварог", "Количество схем - "+20));
         exampleList.add(new WeldingData(R.drawable.empty, "Спутник", "Количество схем - "+2));
         exampleList.add(new WeldingData(R.drawable.termit, "Термит", "Количество схем - "+2));
         exampleList.add(new WeldingData(R.drawable.technotron, "Технотрон", "Количество схем - "+1));
@@ -76,7 +80,7 @@ public class Welding extends AppCompatActivity {
         exampleList.add(new WeldingData(R.drawable.ewm, "EWM", "Количество схем - "+15));
         exampleList.add(new WeldingData(R.drawable.foxweld, "Foxweld", "Количество схем - "+2));
         exampleList.add(new WeldingData(R.drawable.fronius, "Fronius", "Количество схем - "+2));
-        exampleList.add(new WeldingData(R.drawable.fubag, "Fubag", "Количество схем - "+5));
+        exampleList.add(new WeldingData(R.drawable.fubag, "Fubag", "Количество схем - "+6));
         exampleList.add(new WeldingData(R.drawable.gys, "GYSmi", "Количество схем - "+7));
         exampleList.add(new WeldingData(R.drawable.hitachi, "Hitachi", "Количество схем - "+1));
         exampleList.add(new WeldingData(R.drawable.hypertherm, "HYPERTERM", "Количество схем - "+1));
@@ -89,10 +93,11 @@ public class Welding extends AppCompatActivity {
         exampleList.add(new WeldingData(R.drawable.nebula, "NEBULA", "Количество схем - "+1));
         exampleList.add(new WeldingData(R.drawable.profi, "ProfHelper", "Количество схем - "+1));
         exampleList.add(new WeldingData(R.drawable.quattro, "Quattro Elementi", "Количество схем - "+1));
+        exampleList.add(new WeldingData(R.drawable.redbo, "Redbo", "Количество схем - "+6));
         exampleList.add(new WeldingData(R.drawable.empty, "Российские производители", "Количество схем - "+44));
         exampleList.add(new WeldingData(R.drawable.selma, "SELMA", "Количество схем - "+8));
         exampleList.add(new WeldingData(R.drawable.sip, "SIP", "Количество схем - "+1));
-        exampleList.add(new WeldingData(R.drawable.start, "START", "Количество схем - "+1));
+        exampleList.add(new WeldingData(R.drawable.start, "START", "Количество схем - "+2));
         exampleList.add(new WeldingData(R.drawable.sturm, "Sturm", "Количество схем - "+1));
         exampleList.add(new WeldingData(R.drawable.telwin, "Telwin", "Количество схем - "+15));
         exampleList.add(new WeldingData(R.drawable.thermal_dyn, "Thermal Dynamics", "Количество схем - "+4));
@@ -101,9 +106,9 @@ public class Welding extends AppCompatActivity {
 
     }
 
-    private void setUpRecyclerView() {
+    private void setUpRecyclerView() throws ClassNotFoundException {
         RecyclerView recyclerView = findViewById(R.id.welding_recycler);
-//        recyclerView.setHasFixedSize(true);
+      recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         adapter = new WeldingAdapter(exampleList);
 

@@ -33,7 +33,7 @@ public class TelwinActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_xiaomi_catalog);
+        setContentView(R.layout.activity_welding);
         recyclerView = findViewById(R.id.welding_recycler);
         myDB = new TelwinDatabaseHelper(this);
         list = new ArrayList<>();

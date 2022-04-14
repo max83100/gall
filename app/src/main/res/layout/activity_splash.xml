@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:text="Just Fix It"
+        android:text="Chart App"
         android:textColor="#FDFAFA"
         android:textSize="48sp" />
 
@@ -33,7 +33,7 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="395dp"
-        app:srcCompat="@drawable/book" />
+        app:srcCompat="@drawable/tranzistor" />
 
     <TextView
         android:id="@+id/web"

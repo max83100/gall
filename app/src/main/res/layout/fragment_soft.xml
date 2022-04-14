@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,277 @@
     android:orientation="vertical"
     tools:context=".bottom.SoftFragment">
 
-    <TextView
-        android:id="@+id/pdfProg"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Программы для просмотра PDF на телефоне"
-        android:textColor="#020202"
-        android:textSize="24sp" />
-</LinearLayout>
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/pdfProg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Программы для просмотра PDF на телефоне"
+            android:textColor="#020202"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/google_pic"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/google" />
+
+        <TextView
+            android:id="@+id/google_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Google PDF Viewer"
+            android:textColor="#020202"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/google_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Скачать "
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/google_drive"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/google_drive" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/acrobat_pic"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/acrobat" />
+
+        <TextView
+            android:id="@+id/acrobat_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Adobe Acrobat Reader"
+            android:textColor="#020202"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/acrobat_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Скачать "
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/acrobat_play_market"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="6"
+                android:src="@drawable/play_market" />
+
+            <ImageView
+                android:id="@+id/acrobat_drive"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/google_drive" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/reader_pic"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/pdf_reader" />
+
+        <TextView
+            android:id="@+id/reader_pdf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="PDF Reader"
+            android:textColor="#020202"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/reader_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Скачать "
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/reader_play_market"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="6"
+                android:src="@drawable/play_market" />
+
+            <ImageView
+                android:id="@+id/reader_drive"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/google_drive" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/boardProg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="Программы для просмотрa boardview на телефоне"
+            android:textColor="#020202"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/cad_pockets"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/cad_pocket" />
+
+        <TextView
+            android:id="@+id/cad_pockets_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="CAD Pockets"
+            android:textColor="#020202"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/cad_pockets_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Скачать "
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/cad_pockets_play_market"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/play_market" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/dwg_fastview"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/dwg_fastview" />
+
+        <TextView
+            android:id="@+id/dwg_fastview_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="DWG FastView"
+            android:textColor="#020202"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/dwg_fastview_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Скачать "
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/dwg_fastview_play_market"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/play_market" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/gna_cad"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/gna_cad" />
+
+        <TextView
+            android:id="@+id/gna_cad_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="GnaCAD"
+            android:textColor="#020202"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/gna_cad_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Скачать "
+            android:textColor="#020202"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/gna_cad_drive"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:src="@drawable/google_drive" />
+            <ImageView
+                android:id="@+id/gna_cad_play_market"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_weight="6"
+                android:src="@drawable/play_market" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

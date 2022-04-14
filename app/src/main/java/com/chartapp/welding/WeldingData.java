@@ -1,5 +1,8 @@
 package com.chartapp.welding;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class WeldingData {
     String Name, count;
     int imageView;
@@ -25,6 +28,10 @@ public class WeldingData {
     public int getImageView() {
         return imageView;
     }
+
+
+
+
 }
 
 

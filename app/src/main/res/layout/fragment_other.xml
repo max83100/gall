@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".bottom.OtherFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="other" />
+        android:gravity="center"
+        android:orientation="vertical">
 
-</FrameLayout>
+
+        <TextView
+            android:id="@+id/contacts_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Наши контакты"
+            android:textColor="#171717"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/telegram_img"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/telegram" />
+
+        <Button
+            android:id="@+id/telegram_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Присоединиться" />
+
+        <ImageView
+            android:id="@+id/pikabu_img"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/pikabu" />
+
+        <Button
+            android:id="@+id/pikabu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Присоединиться" />
+
+        <ImageView
+            android:id="@+id/whatsapp_img"
+            android:layout_width="match_parent"
+            android:layout_height="86dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/whatsapp" />
+
+        <Button
+            android:id="@+id/whatsapp_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Присоединиться" />
+
+    </LinearLayout>
+
+</ScrollView>

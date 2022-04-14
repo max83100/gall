@@ -12,7 +12,7 @@ import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 import java.util.ArrayList;
 
 public class FubagDatabaseHelper extends SQLiteAssetHelper {
-    private static final String DATABASE_NAME = "welding.db";
+    private static final String DATABASE_NAME = "fubag.db";
     private static final int DATABASE_VERSION = 1;
     Context context;
 
@@ -27,7 +27,7 @@ public class FubagDatabaseHelper extends SQLiteAssetHelper {
             ArrayList<Data> list = new ArrayList<>();
             SQLiteDatabase sqLiteDatabase = getWritableDatabase();
             if(sqLiteDatabase != null){
-                Cursor cursor = sqLiteDatabase.rawQuery("select * from fubag",null);
+                Cursor cursor = sqLiteDatabase.rawQuery("select * from product",null);
                 if(cursor.getCount() != 0){
                     while (cursor.moveToNext()){
                         String name = cursor.getString(0);

@@ -66,6 +66,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:onClick="onClick"
+                android:visibility="gone"
                 app:srcCompat="@drawable/mainboard" />
 
             <TextView
@@ -76,7 +77,8 @@
                 android:gravity="center"
                 android:text="Материнские платы"
                 android:textColor="#101010"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                android:visibility="gone" />
 
             <ImageView
                 android:id="@+id/weldingView"
