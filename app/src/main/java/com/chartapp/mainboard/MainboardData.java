@@ -1,33 +1,32 @@
 package com.chartapp.mainboard;
 
+import java.io.InputStream;
+
 public class MainboardData {
-    private String productName;
-    private String productDate;
+    String Name, count;
+    int imageView;
 
 
-    public MainboardData(String productName, String productDate) {
-        this.productName = productName;
-        this.productDate = productDate;
-
-    }
-
-    public String getproductName() {
-        return productName;
-    }
-
-    public void setproductName(String productName) {
-        this.productName = productName;
-    }
-
-    public String getproductDate() {
-        return productDate;
-    }
-
-    public void setproductDate(String productDate) {
-        this.productDate = productDate;
+    public MainboardData(int imageView, String Name, String count) {
+        this.Name = Name;
+        this.imageView = imageView;
+        this.count = count;
     }
 
 
+
+
+    public String getName() {
+        return Name;
+    }
+
+    public String getCount() {
+        return count;
+    }
+
+    public int getImageView() {
+        return imageView;
+    }
 }
 
 

@@ -1,4 +1,4 @@
-package com.chartapp.mainboard;
+package com.chartapp.phones;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -19,10 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainboardAdapter extends RecyclerView.Adapter<MainboardAdapter.ViewHolder> implements Filterable {
+public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.ViewHolder> implements Filterable {
 
-    private List<MainboardData> exampleList;
-    private List<MainboardData> exampleListFull;
+    private List<PhoneData> exampleList;
+    private List<PhoneData> exampleListFull;
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -38,7 +38,7 @@ public class MainboardAdapter extends RecyclerView.Adapter<MainboardAdapter.View
         }
     }
 
-    public MainboardAdapter(List<MainboardData> exampleList) {
+    public PhoneAdapter(List<PhoneData> exampleList) {
         this.exampleList = exampleList;
         exampleListFull = new ArrayList<>(exampleList);
 
@@ -54,7 +54,7 @@ public class MainboardAdapter extends RecyclerView.Adapter<MainboardAdapter.View
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        MainboardData currentItem = exampleList.get(position);
+        PhoneData currentItem = exampleList.get(position);
 
         holder.imageView.setImageResource(currentItem.getImageView());
         holder.textView1.setText(currentItem.getName());
@@ -64,27 +64,41 @@ public class MainboardAdapter extends RecyclerView.Adapter<MainboardAdapter.View
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), Mainboard_catalog.class);
+                Intent intent = new Intent(v.getContext(), Phone_catalog.class);
                 switch (position){
                     case 0:
-                        intent.putExtra("testNameData", "apple");
+                        intent.putExtra("testNameData", "xiaomi");
                         break;
                     case 1:
-                        intent.putExtra("testNameData", "asrock");
+                        intent.putExtra("testNameData", "apple");
                         break;
                     case 2:
                         intent.putExtra("testNameData", "asus");
                         break;
                     case 3:
-                        intent.putExtra("testNameData", "ecs");
+                        intent.putExtra("testNameData", "samsung");
                         break;
                     case 4:
-                        intent.putExtra("testNameData", "foxconn");
+                        intent.putExtra("testNameData", "huawei");
                         break;
                     case 5:
-                        intent.putExtra("testNameData", "gigabyte");
+                        intent.putExtra("testNameData", "blackberry");
                         break;
-
+                    case 6:
+                        intent.putExtra("testNameData", "meizu");
+                        break;
+                    case 7:
+                        intent.putExtra("testNameData", "oppo");
+                        break;
+                    case 8:
+                        intent.putExtra("testNameData", "nokia");
+                        break;
+                    case 9:
+                        intent.putExtra("testNameData", "lg");
+                        break;
+                    case 10:
+                        intent.putExtra("testNameData", "lenovo");
+                        break;
 
                 }
 
@@ -110,14 +124,14 @@ public class MainboardAdapter extends RecyclerView.Adapter<MainboardAdapter.View
     private Filter exampleFilter = new Filter() {
         @Override
         protected FilterResults performFiltering(CharSequence constraint) {
-            List<MainboardData> filteredList = new ArrayList<>();
+            List<PhoneData> filteredList = new ArrayList<>();
 
             if (constraint == null || constraint.length() == 0) {
                 filteredList.addAll(exampleListFull);
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
 
-                for (MainboardData item : exampleListFull) {
+                for (PhoneData item : exampleListFull) {
                     if (item.getName().toLowerCase().contains(filterPattern)) {
                         filteredList.add(item);
                     }

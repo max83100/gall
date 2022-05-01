@@ -2,10 +2,12 @@ package com.chartapp.welding;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -29,15 +31,17 @@ public class Welding extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_welding);
+        setContentView(R.layout.activity_phone);
         fillExampleList();
         try {
             setUpRecyclerView();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        Toolbar toolbar = findViewById(R.id.welding_toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar_phone);
         setSupportActionBar(toolbar);
+        toolbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.toolbar)));
+        getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.toolbar));
 
 
 
@@ -107,7 +111,7 @@ public class Welding extends AppCompatActivity {
     }
 
     private void setUpRecyclerView() throws ClassNotFoundException {
-        RecyclerView recyclerView = findViewById(R.id.welding_recycler);
+        RecyclerView recyclerView = findViewById(R.id.phone_recycler);
       recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         adapter = new WeldingAdapter(exampleList);

@@ -15,85 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chartapp.R;
-import com.chartapp.laptop.acer.Acer_laptop_catalog;
-import com.chartapp.laptop.apple.Apple_laptop_catalog;
-import com.chartapp.laptop.aristo.Aristo_laptop_catalog;
-import com.chartapp.laptop.asus.Asus_laptop_catalog;
-import com.chartapp.laptop.benq.Benq_laptop_catalog;
-import com.chartapp.laptop.clevo.Clevo_laptop_catalog;
-import com.chartapp.laptop.compal.Compal_laptop_catalog;
-import com.chartapp.laptop.compaq.Compaq_laptop_catalog;
-import com.chartapp.laptop.dell.Dell_laptop_catalog;
-import com.chartapp.laptop.dns.Dns_laptop_catalog;
-import com.chartapp.laptop.fujitsu.Fujitsu_laptop_catalog;
-import com.chartapp.laptop.gateway.Gateway_laptop_catalog;
-import com.chartapp.laptop.gericom.Gericom_laptop_catalog;
-import com.chartapp.laptop.hp.Hp_laptop_catalog;
-import com.chartapp.laptop.lenovo.Lenovo_laptop_catalog;
-import com.chartapp.laptop.lg.Lg_laptop_catalog;
-import com.chartapp.laptop.packardbell.Packard_catalog_laptop;
-import com.chartapp.laptop.roverbook.Roverbook_laptop_catalog;
-import com.chartapp.laptop.samsung.Samsung_laptop_catalog;
-import com.chartapp.laptop.sony.Sony_laptop_catalog;
-import com.chartapp.welding.aotai.AotaiActivity;
-import com.chartapp.welding.aurora.AuroraActivity;
-import com.chartapp.welding.bestweld.BestweldActivity;
-import com.chartapp.welding.blueweld.BlueweldActivity;
-import com.chartapp.welding.brima.BrimaActivity;
-import com.chartapp.welding.cebora.CeboraActivity;
-import com.chartapp.welding.cemont.CemontActivity;
-import com.chartapp.welding.china.ChinaActivity;
-import com.chartapp.welding.ciklon.CiklonActivity;
-import com.chartapp.welding.deca.DecaActivity;
-import com.chartapp.welding.edon.EdonActivity;
-import com.chartapp.welding.esab.EsabActivity;
-import com.chartapp.welding.ewm.EwmActivity;
-import com.chartapp.welding.feb.FebActivity;
-import com.chartapp.welding.forsazh.ForsazhActivity;
-import com.chartapp.welding.foxweld.FoxweldActivity;
-import com.chartapp.welding.fronius.FroniusActivity;
-import com.chartapp.welding.fubag.FubagActivity;
-import com.chartapp.welding.gladiator.GladiatorActivity;
-import com.chartapp.welding.gys.GysActivity;
-import com.chartapp.welding.hitachi.HitachiActivity;
-import com.chartapp.welding.hyperterm.HypertermActivity;
-import com.chartapp.welding.ine.IneActivity;
-import com.chartapp.welding.kalibr.KalibrActivity;
-import com.chartapp.welding.kedr.KedrActivity;
-import com.chartapp.welding.kemppi.KemppiActivity;
-import com.chartapp.welding.kende.KendeActivity;
-import com.chartapp.welding.kontur.KonturActivity;
-import com.chartapp.welding.lincoln.LincolnActivity;
-import com.chartapp.welding.linkor.LinkorActivity;
-import com.chartapp.welding.mangust.MangustActivity;
-import com.chartapp.welding.migatronic.MigatronicActivity;
-import com.chartapp.welding.murex.MurexActivity;
-import com.chartapp.welding.nebula.NebulaActivity;
-import com.chartapp.welding.neon.NeonActivity;
-import com.chartapp.welding.pdg.PdgActivity;
-import com.chartapp.welding.piton.PitonActivity;
-import com.chartapp.welding.profhelpet.ProfhelperActivity;
-import com.chartapp.welding.ptk.PtkActivity;
-import com.chartapp.welding.pulsar.PulsarActivity;
-import com.chartapp.welding.quattro.QuattroActivity;
-import com.chartapp.welding.redbo.RedboActivity;
-import com.chartapp.welding.resanta.ResantaActivity;
-import com.chartapp.welding.rikon.RikonActivity;
-import com.chartapp.welding.russia.RussiaActivity;
-import com.chartapp.welding.selma.SelmaActivity;
-import com.chartapp.welding.sip.SipActivity;
-import com.chartapp.welding.solaris.SolarisActivity;
-import com.chartapp.welding.sputnik.SputnikActivity;
-import com.chartapp.welding.start.StartActivity;
-import com.chartapp.welding.sturm.SturmActivity;
-import com.chartapp.welding.svarog.SvarogActivity;
-import com.chartapp.welding.technotron.TechnotronActivity;
-import com.chartapp.welding.telwin.TelwinActivity;
-import com.chartapp.welding.termit.TermitActivity;
-import com.chartapp.welding.thermal.ThermalActivity;
-import com.chartapp.welding.torros.TorrosActivity;
-import com.chartapp.welding.torus.TorusActivity;
-import com.chartapp.welding.wester.WesterActivity;
+import com.chartapp.phones.Phone_catalog;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -102,13 +25,6 @@ import java.util.List;
 public class WeldingAdapter extends RecyclerView.Adapter<WeldingAdapter.ViewHolder> implements Filterable {
     private List<WeldingData> exampleList;
     private List<WeldingData> exampleListFull;
-    Intent intent;
-
-
-
-
-
-
 
 
     public WeldingAdapter(List<WeldingData> exampleList) throws ClassNotFoundException {
@@ -180,7 +96,7 @@ public class WeldingAdapter extends RecyclerView.Adapter<WeldingAdapter.ViewHold
     };
 
 
-    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener  {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageView;
         TextView textView1;
         TextView textView2;
@@ -190,197 +106,199 @@ public class WeldingAdapter extends RecyclerView.Adapter<WeldingAdapter.ViewHold
             imageView = itemView.findViewById(R.id.piccatalog);
             textView1 = itemView.findViewById(R.id.namecatalog);
             textView2 = itemView.findViewById(R.id.countcatalog);
-            imageView.setOnClickListener(this);
-            textView1.setOnClickListener(this);
-            textView2.setOnClickListener(this);
+            imageView.setOnClickListener( this);
+            textView1.setOnClickListener( this);
+            textView2.setOnClickListener( this);
 
         }
 
         @Override
         public void onClick(View v) {
             int pos = getLayoutPosition();
-            switch (pos){
+            Intent intent = new Intent(v.getContext(), Welding_catalog.class);
+            switch (pos) {
                 case 0:
-                    intent = new Intent(v.getContext(), KedrActivity.class);
+                    intent.putExtra("testNameData", "kedr");
                     break;
                 case 1:
-                    intent = new Intent(v.getContext(), PtkActivity.class);
+                    intent.putExtra("testNameData", "ptk");
                     break;
                 case 2:
-                    intent = new Intent(v.getContext(), SolarisActivity.class);
+                    intent.putExtra("testNameData", "solaris");
                     break;
                 case 3:
-                    intent = new Intent(v.getContext(), GladiatorActivity.class);
+                    intent.putExtra("testNameData", "gladiator");
                     break;
                 case 4:
-                    intent = new Intent(v.getContext(), KalibrActivity.class);
+                    intent.putExtra("testNameData", "kalibr");
                     break;
                 case 5:
-                    intent = new Intent(v.getContext(), KonturActivity.class);
+                    intent.putExtra("testNameData", "kontur");
                     break;
                 case 6:
-                    intent = new Intent(v.getContext(), LinkorActivity.class);
+                    intent.putExtra("testNameData", "linkor");
                     break;
                 case 7:
-                    intent = new Intent(v.getContext(), MangustActivity.class);
+                    intent.putExtra("testNameData", "mangust");
                     break;
                 case 8:
-                    intent = new Intent(v.getContext(), NeonActivity.class);
+                    intent.putExtra("testNameData", "neon");
                     break;
                 case 9:
-                    intent = new Intent(v.getContext(), PdgActivity.class);
+                    intent.putExtra("testNameData", "pdg");
                     break;
                 case 10:
-                    intent = new Intent(v.getContext(), PitonActivity.class);
+                    intent.putExtra("testNameData", "piton");
                     break;
                 case 11:
-                    intent = new Intent(v.getContext(), PulsarActivity.class);
+                    intent.putExtra("testNameData", "pulsar");
                     break;
                 case 12:
-                    intent = new Intent(v.getContext(), ResantaActivity.class);
+                    intent.putExtra("testNameData", "resanta");
                     break;
                 case 13:
-                    intent = new Intent(v.getContext(), RikonActivity.class);
+                    intent.putExtra("testNameData", "rikon");
                     break;
                 case 14:
-                    intent = new Intent(v.getContext(), SvarogActivity.class);
+                    intent.putExtra("testNameData", "svarog");
                     break;
                 case 15:
-                    intent = new Intent(v.getContext(), SputnikActivity.class);
+                    intent.putExtra("testNameData", "sputnik");
                     break;
                 case 16:
-                    intent = new Intent(v.getContext(), TermitActivity.class);
+                    intent.putExtra("testNameData", "termit");
                     break;
                 case 17:
-                    intent = new Intent(v.getContext(), TechnotronActivity.class);
+                    intent.putExtra("testNameData", "technotron");
                     break;
                 case 18:
-                    intent = new Intent(v.getContext(), TorusActivity.class);
+                    intent.putExtra("testNameData", "torus");
                     break;
                 case 19:
-                    intent = new Intent(v.getContext(), FebActivity.class);
+                    intent.putExtra("testNameData", "feb");
                     break;
                 case 20:
-                    intent = new Intent(v.getContext(), ForsazhActivity.class);
+                    intent.putExtra("testNameData", "forsazh");
                     break;
                 case 21:
-                    intent = new Intent(v.getContext(), CiklonActivity.class);
+                    intent.putExtra("testNameData", "ciklon");
                     break;
                 case 22:
-                    intent = new Intent(v.getContext(), AotaiActivity.class);
+                    intent.putExtra("testNameData", "aotai");
                     break;
                 case 23:
-                    intent = new Intent(v.getContext(), AuroraActivity.class);
+                    intent.putExtra("testNameData", "aurora");
                     break;
                 case 24:
-                    intent = new Intent(v.getContext(), BlueweldActivity.class);
+                    intent.putExtra("testNameData", "blueweld");
                     break;
                 case 25:
-                    intent = new Intent(v.getContext(), BestweldActivity.class);
+                    intent.putExtra("testNameData", "bestweld");
                     break;
                 case 26:
-                    intent = new Intent(v.getContext(), BrimaActivity.class);
+                    intent.putExtra("testNameData", "brima");
                     break;
                 case 27:
-                    intent = new Intent(v.getContext(), CeboraActivity.class);
+                    intent.putExtra("testNameData", "cebora");
+                    break;
+                case 28:
+                    intent.putExtra("testNameData", "cemont");
                     break;
                 case 29:
-                    intent = new Intent(v.getContext(), CemontActivity.class);
+                    intent.putExtra("testNameData", "china");
                     break;
                 case 30:
-                    intent = new Intent(v.getContext(), ChinaActivity.class);
+                    intent.putExtra("testNameData", "deca");
                     break;
                 case 31:
-                    intent = new Intent(v.getContext(), DecaActivity.class);
+                    intent.putExtra("testNameData", "edon");
                     break;
                 case 32:
-                    intent = new Intent(v.getContext(), EdonActivity.class);
+                    intent.putExtra("testNameData", "esab");
                     break;
                 case 33:
-                    intent = new Intent(v.getContext(), EsabActivity.class);
+                    intent.putExtra("testNameData", "ewm");
                     break;
                 case 34:
-                    intent = new Intent(v.getContext(), EwmActivity.class);
+                    intent.putExtra("testNameData", "foxweld");
                     break;
                 case 35:
-                    intent = new Intent(v.getContext(), FoxweldActivity.class);
+                    intent.putExtra("testNameData", "fronius");
                     break;
                 case 36:
-                    intent = new Intent(v.getContext(), FroniusActivity.class);
+                    intent.putExtra("testNameData", "fubag");
                     break;
                 case 37:
-                    intent = new Intent(v.getContext(), FubagActivity.class);
+                    intent.putExtra("testNameData", "gys");
                     break;
                 case 38:
-                    intent = new Intent(v.getContext(), GysActivity.class);
+                    intent.putExtra("testNameData", "hitachi");
                     break;
                 case 39:
-                    intent = new Intent(v.getContext(), HitachiActivity.class);
+                    intent.putExtra("testNameData", "hyperterm");
                     break;
                 case 40:
-                    intent = new Intent(v.getContext(), HypertermActivity.class);
+                    intent.putExtra("testNameData", "ine");
                     break;
                 case 41:
-                    intent = new Intent(v.getContext(), IneActivity.class);
+                    intent.putExtra("testNameData", "kemppi");
                     break;
                 case 42:
-                    intent = new Intent(v.getContext(), KemppiActivity.class);
+                    intent.putExtra("testNameData", "kende");
                     break;
                 case 43:
-                    intent = new Intent(v.getContext(), KendeActivity.class);
+                    intent.putExtra("testNameData", "lincoln");
                     break;
                 case 44:
-                    intent = new Intent(v.getContext(), LincolnActivity.class);
+                    intent.putExtra("testNameData", "migatronic");
                     break;
                 case 45:
-                    intent = new Intent(v.getContext(), MigatronicActivity.class);
+                    intent.putExtra("testNameData", "murex");
                     break;
                 case 46:
-                    intent = new Intent(v.getContext(), MurexActivity.class);
+                    intent.putExtra("testNameData", "nebula");
                     break;
                 case 47:
-                    intent = new Intent(v.getContext(), NebulaActivity.class);
+                    intent.putExtra("testNameData", "profhelper");
                     break;
                 case 48:
-                    intent = new Intent(v.getContext(), ProfhelperActivity.class);
+                    intent.putExtra("testNameData", "quattro");
                     break;
                 case 49:
-                    intent = new Intent(v.getContext(), QuattroActivity.class);
+                    intent.putExtra("testNameData", "redbo");
                     break;
                 case 50:
-                    intent = new Intent(v.getContext(), RedboActivity.class);
+                    intent.putExtra("testNameData", "russia");
                     break;
                 case 51:
-                    intent = new Intent(v.getContext(), RussiaActivity.class);
+                    intent.putExtra("testNameData", "selma");
                     break;
                 case 52:
-                    intent = new Intent(v.getContext(), SelmaActivity.class);
+                    intent.putExtra("testNameData", "sip");
                     break;
                 case 53:
-                    intent = new Intent(v.getContext(), SipActivity.class);
+                    intent.putExtra("testNameData", "start");
                     break;
                 case 54:
-                    intent = new Intent(v.getContext(), StartActivity.class);
+                    intent.putExtra("testNameData", "sturm");
                     break;
                 case 55:
-                    intent = new Intent(v.getContext(), SturmActivity.class);
+                    intent.putExtra("testNameData", "telwin");
                     break;
                 case 56:
-                    intent = new Intent(v.getContext(), TelwinActivity.class);
+                    intent.putExtra("testNameData", "thermal");
                     break;
                 case 57:
-                    intent = new Intent(v.getContext(), ThermalActivity.class);
+                    intent.putExtra("testNameData", "torros");
                     break;
                 case 58:
-                    intent = new Intent(v.getContext(), TorrosActivity.class);
-                    break;
-                case 59:
-                    intent = new Intent(v.getContext(), WesterActivity.class);
+                    intent.putExtra("testNameData", "wester");
                     break;
 
             }
             v.getContext().startActivity(intent);
-        }
-    }
 
+        }
+
+    }
 }

@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
 
     <solid
-        android:color="#4D71ED"
+        android:color="@color/toolbar"
         />
 
     <corners

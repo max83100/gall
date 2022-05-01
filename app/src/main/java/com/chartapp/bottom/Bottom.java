@@ -3,10 +3,12 @@ package com.chartapp.bottom;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,7 +34,8 @@ public class Bottom extends AppCompatActivity  {
                 .replace(R.id.fragment_layout,new ChartFragment()).commit();
         Toolbar toolbar = findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
-        toolbar.setDrawingCacheBackgroundColor(R.color.purple_700);
+        toolbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.toolbar)));
+        getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.toolbar));
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {

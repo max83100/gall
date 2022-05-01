@@ -1,4 +1,4 @@
-package com.chartapp.mainboard;
+package com.chartapp.laptop;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -12,64 +12,57 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.SearchView;
+import android.widget.Toast;
 
+import com.chartapp.Adapter;
+import com.chartapp.Data;
 import com.chartapp.R;
 
-
-
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
-public class Mainboard extends AppCompatActivity {
-    private MainboardAdapter adapter;
-    private List<MainboardData> exampleList;
-
+public class Laptop_catalog extends AppCompatActivity {
+    String data;
+    Laptop_helper myDB;
+    ArrayList<Data> list;
+    Adapter customAdapter;
+    RecyclerView recyclerView;
 
 
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_phone);
-        try {
-            fillExampleList();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        setUpRecyclerView();
+        Bundle extras = getIntent().getExtras();
+        data = extras.getString("testNameData");
+        setContentView(R.layout.activity_xiaomi_catalog);
+        recyclerView = findViewById(R.id.xiaomiView);
+        myDB = new Laptop_helper(this);
+        Laptop_helper.tab_name = data;
+        setTitle(data);
+
+        list = new ArrayList<>();
+        showData(recyclerView);
         Toolbar toolbar = findViewById(R.id.toolbar_phone);
         setSupportActionBar(toolbar);
         toolbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.toolbar)));
         getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.toolbar));
 
-
-
     }
-    private void fillExampleList() throws IOException {
-        exampleList = new ArrayList<>();
-        exampleList.add(new MainboardData(R.drawable.apple, "Apple", "Количество схем - "+1));
-        exampleList.add(new MainboardData(R.drawable.asrock, "ASRock", "Количество схем - "+61));
-        exampleList.add(new MainboardData(R.drawable.asus, "Asus", "Количество схем - "+221));
-        exampleList.add(new MainboardData(R.drawable.ecs, "ECS", "Количество схем - "+129));
-        exampleList.add(new MainboardData(R.drawable.foxconn, "Foxconn", "Количество схем - "+34));
-        exampleList.add(new MainboardData(R.drawable.gigabyte, "GIGABYTE", "Количество схем - "+203));
-
-
+    public void showData(View view){
+        try {
+            list = myDB.getAllData();
+            customAdapter = new Adapter(list);
+            recyclerView.hasFixedSize();
+            recyclerView.setLayoutManager(new LinearLayoutManager(this));
+            recyclerView.setAdapter(customAdapter);
+        } catch (Exception e) {
+            Toast.makeText(this, "show data"+e.getMessage(), Toast.LENGTH_SHORT).show();
+            e.printStackTrace();
+        }
     }
-
-    private void setUpRecyclerView() {
-        RecyclerView recyclerView = findViewById(R.id.phone_recycler);
-        recyclerView.setHasFixedSize(true);
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
-        adapter = new MainboardAdapter((ArrayList<MainboardData>) exampleList);
-
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(adapter);
-    }
-
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.example_menu, menu);
@@ -87,14 +80,12 @@ public class Mainboard extends AppCompatActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
-
-                adapter.getFilter().filter(newText);
+                customAdapter.getFilter().filter(newText);
                 return false;
             }
         });
         return true;
     }
-
 
 
 

@@ -1,7 +1,10 @@
 package com.chartapp.laptop;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,56 +12,26 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.chartapp.Data;
+import com.chartapp.MainActivity;
 import com.chartapp.R;
-import com.chartapp.laptop.acer.Acer_laptop_catalog;
-import com.chartapp.laptop.apple.Apple_laptop_catalog;
-import com.chartapp.laptop.aristo.Aristo_laptop_catalog;
-import com.chartapp.laptop.asus.Asus_laptop_catalog;
-import com.chartapp.laptop.benq.Benq_laptop_catalog;
-import com.chartapp.laptop.clevo.Clevo_laptop_catalog;
-import com.chartapp.laptop.compal.Compal_laptop_catalog;
-import com.chartapp.laptop.compaq.Compaq_laptop_catalog;
-import com.chartapp.laptop.dell.Dell_laptop_catalog;
-import com.chartapp.laptop.dns.Dns_laptop_catalog;
-import com.chartapp.laptop.fujitsu.Fujitsu_laptop_catalog;
-import com.chartapp.laptop.gateway.Gateway_laptop_catalog;
-import com.chartapp.laptop.gericom.Gericom_laptop_catalog;
-import com.chartapp.laptop.hp.Hp_laptop_catalog;
-import com.chartapp.laptop.lenovo.Lenovo_laptop_catalog;
-import com.chartapp.laptop.lg.Lg_laptop_catalog;
-import com.chartapp.laptop.packardbell.Packard_catalog_laptop;
-import com.chartapp.laptop.roverbook.Roverbook_laptop_catalog;
-import com.chartapp.laptop.samsung.Samsung_laptop_catalog;
-import com.chartapp.laptop.sony.Sony_laptop_catalog;
-import com.chartapp.phones.apple.Apple_catalog;
-import com.chartapp.phones.asus.Asus_catalog;
-import com.chartapp.phones.blackberry.Blackberry_catalog;
-import com.chartapp.phones.huawei.Huawei_catalog;
-import com.chartapp.phones.lenovo.Lenovo_catalog;
-import com.chartapp.phones.lg.Lg_catalog;
-import com.chartapp.phones.meizu.Meizu_catalog;
-import com.chartapp.phones.nokia.Nokia_catalog;
-import com.chartapp.phones.oppo.Oppo_catalog;
-import com.chartapp.phones.samsung.Samsung_catalog;
-
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class LaptopAdapter extends RecyclerView.Adapter<LaptopAdapter.ViewHolder> implements Filterable {
-    private List<LaptopData> exampleList;
+
+    private ArrayList<LaptopData> exampleList;
     private List<LaptopData> exampleListFull;
 
-    public LaptopAdapter() {
 
-    }
-
-    class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView textView1;
         TextView textView2;
@@ -71,9 +44,10 @@ public class LaptopAdapter extends RecyclerView.Adapter<LaptopAdapter.ViewHolder
         }
     }
 
-    public LaptopAdapter(List<LaptopData> exampleList) {
+    public LaptopAdapter(ArrayList<LaptopData> exampleList) {
         this.exampleList = exampleList;
         exampleListFull = new ArrayList<>(exampleList);
+
     }
 
     @NonNull
@@ -93,72 +67,74 @@ public class LaptopAdapter extends RecyclerView.Adapter<LaptopAdapter.ViewHolder
         holder.textView2.setText(currentItem.getCount());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
-            Intent intent;
+
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), Laptop_catalog.class);
                 switch (position){
                     case 0:
-                        intent = new Intent(v.getContext(), Compal_laptop_catalog.class);
+                        intent.putExtra("testNameData", "compal");
                         break;
                     case 1:
-                        intent = new Intent(v.getContext(), Acer_laptop_catalog.class);
+                        intent.putExtra("testNameData", "acer");
                         break;
                     case 2:
-                        intent = new Intent(v.getContext(), Asus_laptop_catalog.class);
+                        intent.putExtra("testNameData", "asus");
                         break;
                     case 3:
-                        intent = new Intent(v.getContext(), Apple_laptop_catalog.class);
+                        intent.putExtra("testNameData", "apple");
                         break;
                     case 4:
-                        intent = new Intent(v.getContext(), Aristo_laptop_catalog.class);
+                        intent.putExtra("testNameData", "aristo");
                         break;
                     case 5:
-                        intent = new Intent(v.getContext(), Benq_laptop_catalog.class);
+                        intent.putExtra("testNameData", "benq");
                         break;
                     case 6:
-                        intent = new Intent(v.getContext(), Clevo_laptop_catalog.class);
+                        intent.putExtra("testNameData", "clevo");
                         break;
                     case 7:
-                        intent = new Intent(v.getContext(), Compaq_laptop_catalog.class);
+                        intent.putExtra("testNameData", "compaq");
                         break;
                     case 8:
-                        intent = new Intent(v.getContext(), Dns_laptop_catalog.class);
+                        intent.putExtra("testNameData", "dns");
                         break;
                     case 9:
-                        intent = new Intent(v.getContext(), Fujitsu_laptop_catalog.class);
+                        intent.putExtra("testNameData", "fujitsu");
                         break;
                     case 10:
-                        intent = new Intent(v.getContext(), Gateway_laptop_catalog.class);
+                        intent.putExtra("testNameData", "gateway");
                         break;
                     case 11:
-                        intent = new Intent(v.getContext(), Gericom_laptop_catalog.class);
+                        intent.putExtra("testNameData", "gericom");
                         break;
                     case 12:
-                        intent = new Intent(v.getContext(), Dell_laptop_catalog.class);
+                        intent.putExtra("testNameData", "dell");
                         break;
                     case 13:
-                        intent = new Intent(v.getContext(), Hp_laptop_catalog.class);
+                        intent.putExtra("testNameData", "hp");
                         break;
                     case 14:
-                        intent = new Intent(v.getContext(), Lenovo_laptop_catalog.class);
+                        intent.putExtra("testNameData", "lenovo");
                         break;
                     case 15:
-                        intent = new Intent(v.getContext(), Lg_laptop_catalog.class);
+                        intent.putExtra("testNameData", "lg");
                         break;
                     case 16:
-                        intent = new Intent(v.getContext(), Packard_catalog_laptop.class);
+                        intent.putExtra("testNameData", "packardbell");
                         break;
                     case 17:
-                        intent = new Intent(v.getContext(), Samsung_laptop_catalog.class);
+                        intent.putExtra("testNameData", "samsung");
                         break;
                     case 18:
-                        intent = new Intent(v.getContext(), Roverbook_laptop_catalog.class);
+                        intent.putExtra("testNameData", "roverbook");
                         break;
                     case 19:
-                        intent = new Intent(v.getContext(), Sony_laptop_catalog.class);
+                        intent.putExtra("testNameData", "sony");
                         break;
 
                 }
+
                 v.getContext().startActivity(intent);
 
             }
@@ -208,5 +184,6 @@ public class LaptopAdapter extends RecyclerView.Adapter<LaptopAdapter.ViewHolder
             notifyDataSetChanged();
         }
     };
+
 
 }

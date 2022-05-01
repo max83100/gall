@@ -2,11 +2,13 @@ package com.chartapp.phones;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
 import android.annotation.SuppressLint;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,8 +18,7 @@ import android.widget.SearchView;
 
 
 import com.chartapp.R;
-import com.chartapp.phones.phone_adapter.PhoneAdapter;
-import com.chartapp.phones.phone_adapter.PhoneData;
+
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -43,6 +44,8 @@ public class Phone extends AppCompatActivity  {
         setUpRecyclerView();
         Toolbar toolbar = findViewById(R.id.toolbar_phone);
         setSupportActionBar(toolbar);
+        toolbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.toolbar)));
+        getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.toolbar));
 
 
 

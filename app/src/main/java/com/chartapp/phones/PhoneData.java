@@ -1,20 +1,23 @@
-package com.chartapp.laptop;
+package com.chartapp.phones;
 
 import java.io.InputStream;
 
-public class LaptopData {
+public class PhoneData {
     String Name, count;
     int imageView;
 
+    public PhoneData() {
+    }
 
-
-    public LaptopData(int imageView, String Name, String count) {
+    public PhoneData(int imageView, String Name, String count) {
         this.Name = Name;
         this.imageView = imageView;
         this.count = count;
     }
 
 
+    public PhoneData(String name, String ref, String other) {
+    }
 
 
     public String getName() {

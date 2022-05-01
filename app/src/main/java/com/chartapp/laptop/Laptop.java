@@ -2,10 +2,12 @@ package com.chartapp.laptop;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,19 +26,26 @@ public class Laptop extends AppCompatActivity {
     private List<LaptopData> exampleList;
 
 
+
     @SuppressLint("ResourceAsColor")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_laptop);
+        setContentView(R.layout.activity_phone);
         try {
             fillExampleList();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        setUpRecyclerView();
-        Toolbar toolbar = findViewById(R.id.toolbar_laptop);
+        try {
+            setUpRecyclerView();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        Toolbar toolbar = findViewById(R.id.toolbar_phone);
         setSupportActionBar(toolbar);
+        toolbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.toolbar)));
+        getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.toolbar));
 
 
 
@@ -67,8 +76,8 @@ public class Laptop extends AppCompatActivity {
 
     }
 
-    private void setUpRecyclerView() {
-        RecyclerView recyclerView = findViewById(R.id.laptop_recycler);
+    private void setUpRecyclerView() throws ClassNotFoundException {
+        RecyclerView recyclerView = findViewById(R.id.phone_recycler);
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         adapter = new LaptopAdapter((ArrayList<LaptopData>) exampleList);
@@ -101,6 +110,7 @@ public class Laptop extends AppCompatActivity {
         });
         return true;
     }
+
 
 
 
