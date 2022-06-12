@@ -14,6 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChartApp">
         <activity
+            android:name=".power.Power"
+            android:exported="false" />
+        <activity
+            android:name=".power.Power_catalog"
+            android:exported="false" />
+        <activity
             android:name=".laptop.Laptop_catalog"
             android:exported="false" />
         <activity
@@ -25,12 +31,10 @@
         <activity
             android:name=".welding.Welding_catalog"
             android:exported="false" />
-
         <activity
             android:name=".welding.Welding"
             android:exported="false"
             android:label="Сварочное оборудование" />
-
         <activity
             android:name=".phones.Phone"
             android:exported="false"
@@ -59,9 +63,7 @@
             android:label="Главное меню" />
         <activity
             android:name=".bottom.Bottom"
-            android:exported="false"
-            />
-
+            android:exported="false" />
     </application>
 
 </manifest>

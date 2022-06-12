@@ -96,6 +96,23 @@
                 android:text="Сварочное оборудование"
                 android:textColor="#101010"
                 android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/powersupView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:onClick="onClick"
+                app:srcCompat="@drawable/atx" />
+
+            <TextView
+                android:id="@+id/powersuptext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Блоки питания"
+                android:textColor="#101010"
+                android:textSize="24sp" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

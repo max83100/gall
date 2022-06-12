@@ -15,6 +15,7 @@ import com.chartapp.R;
 import com.chartapp.laptop.Laptop;
 import com.chartapp.mainboard.Mainboard;
 import com.chartapp.phones.Phone;
+import com.chartapp.power.Power;
 import com.chartapp.welding.Welding;
 
 public class ChartFragment extends Fragment {
@@ -45,6 +46,7 @@ public class ChartFragment extends Fragment {
         ImageView mainboard = view.findViewById(R.id.mainboardView);
         ImageView phone = view.findViewById(R.id.phoneView);
         ImageView welding = view.findViewById(R.id.weldingView);
+        ImageView power = view.findViewById(R.id.powersupView);
 
         phone.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +75,13 @@ public class ChartFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 intent = new Intent(getActivity(), Welding.class);
+                startActivity(intent);
+            }
+        });
+        power.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getActivity(), Power.class);
                 startActivity(intent);
             }
         });
