@@ -15,6 +15,14 @@
         android:elevation="4dp">
     </androidx.appcompat.widget.Toolbar>
 
+    <com.yandex.mobile.ads.banner.BannerAdView
+        android:id="@+id/banner_ad_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.yandex.mobile.ads.banner.BannerAdView>
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/phone_recycler"

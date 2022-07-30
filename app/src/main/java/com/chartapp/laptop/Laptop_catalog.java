@@ -1,14 +1,9 @@
 package com.chartapp.laptop;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.content.ContextCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.annotation.SuppressLint;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -17,9 +12,20 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.SearchView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.chartapp.Adapter;
 import com.chartapp.Data;
 import com.chartapp.R;
+import com.yandex.mobile.ads.banner.AdSize;
+import com.yandex.mobile.ads.banner.BannerAdView;
+import com.yandex.mobile.ads.common.AdRequest;
+import com.yandex.mobile.ads.common.InitializationListener;
+import com.yandex.mobile.ads.common.MobileAds;
 
 import java.util.ArrayList;
 
@@ -29,6 +35,8 @@ public class Laptop_catalog extends AppCompatActivity {
     ArrayList<Data> list;
     Adapter customAdapter;
     RecyclerView recyclerView;
+    BannerAdView mBannerAdView;
+    private static final String YANDEX_MOBILE_ADS_TAG = "YandexMobileAds";
 
 
     @SuppressLint("ResourceAsColor")
@@ -49,6 +57,19 @@ public class Laptop_catalog extends AppCompatActivity {
         setSupportActionBar(toolbar);
         toolbar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.toolbar)));
         getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.toolbar));
+
+        //ads
+        MobileAds.initialize(this, new InitializationListener() {
+            @Override
+            public void onInitializationCompleted() {
+                Log.d(YANDEX_MOBILE_ADS_TAG, "SDK initialized");
+            }
+        });
+        final AdRequest adRequest = new AdRequest.Builder().build();
+        mBannerAdView =  findViewById(R.id.banner_ad_view);
+        mBannerAdView.setAdUnitId("R-M-1760873-1");
+        mBannerAdView.setAdSize(AdSize.BANNER_320x50);
+        mBannerAdView.loadAd(adRequest);
 
     }
     public void showData(View view){

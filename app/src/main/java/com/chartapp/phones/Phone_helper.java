@@ -15,7 +15,7 @@ public class Phone_helper extends SQLiteAssetHelper {
 
     static String tab_name;
     private static final String DATABASE_NAME = "phones.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
     Context context;
 
 
@@ -23,7 +23,7 @@ public class Phone_helper extends SQLiteAssetHelper {
     public Phone_helper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context;
-        setForcedUpgrade(1);
+        setForcedUpgrade(2);
 
     }
     public ArrayList<Data> getAllData(){

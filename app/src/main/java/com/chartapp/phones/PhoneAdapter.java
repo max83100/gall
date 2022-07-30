@@ -99,6 +99,37 @@ public class PhoneAdapter extends RecyclerView.Adapter<PhoneAdapter.ViewHolder> 
                     case 10:
                         intent.putExtra("testNameData", "lenovo");
                         break;
+                    case 11:
+                        intent.putExtra("testNameData", "fly");
+                        break;
+                    case 12:
+                        intent.putExtra("testNameData", "motorola");
+                        break;
+                    case 13:
+                        intent.putExtra("testNameData", "panasonic");
+                        break;
+                    case 14:
+                        intent.putExtra("testNameData", "pantech");
+                        break;
+                    case 15:
+                        intent.putExtra("testNameData", "sharp");
+                        break;
+                    case 16:
+                        intent.putExtra("testNameData", "siemens");
+                        break;
+                    case 17:
+                        intent.putExtra("testNameData", "eric");
+                        break;
+                    case 18:
+                        intent.putExtra("testNameData", "sony");
+                        break;
+                    case 19:
+                        intent.putExtra("testNameData", "voxtel");
+                        break;
+                    case 20:
+                        intent.putExtra("testNameData", "wexler");
+                        break;
+
 
                 }
 
