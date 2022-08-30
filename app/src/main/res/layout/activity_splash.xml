@@ -35,12 +35,4 @@
         android:layout_height="395dp"
         app:srcCompat="@drawable/tranzistor" />
 
-    <TextView
-        android:id="@+id/web"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="pcbchart.ru"
-        android:textColor="#F6F5F5"
-        android:textSize="34sp" />
 </LinearLayout>

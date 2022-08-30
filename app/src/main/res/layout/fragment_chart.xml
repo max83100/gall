@@ -113,6 +113,23 @@
                 android:text="Блоки питания"
                 android:textColor="#101010"
                 android:textSize="24sp" />
+
+            <ImageView
+                android:id="@+id/vidrocaardView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:onClick="onClick"
+                app:srcCompat="@drawable/videocard" />
+
+            <TextView
+                android:id="@+id/videocardtext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:text="Видеокарты"
+                android:textColor="#101010"
+                android:textSize="24sp" />
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 

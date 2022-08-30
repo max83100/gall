@@ -1,21 +1,20 @@
 package com.chartapp.bottom;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+
+import androidx.fragment.app.Fragment;
 
 import com.chartapp.R;
 import com.chartapp.laptop.Laptop;
 import com.chartapp.mainboard.Mainboard;
 import com.chartapp.phones.Phone;
 import com.chartapp.power.Power;
+import com.chartapp.videocard.Videocard;
 import com.chartapp.welding.Welding;
 
 public class ChartFragment extends Fragment {
@@ -47,6 +46,7 @@ public class ChartFragment extends Fragment {
         ImageView phone = view.findViewById(R.id.phoneView);
         ImageView welding = view.findViewById(R.id.weldingView);
         ImageView power = view.findViewById(R.id.powersupView);
+        ImageView videocard = view.findViewById(R.id.vidrocaardView);
 
         phone.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,6 +82,13 @@ public class ChartFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 intent = new Intent(getActivity(), Power.class);
+                startActivity(intent);
+            }
+        });
+        videocard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getActivity(), Videocard.class);
                 startActivity(intent);
             }
         });
