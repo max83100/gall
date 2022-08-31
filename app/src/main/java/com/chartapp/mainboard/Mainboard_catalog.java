@@ -3,6 +3,7 @@ package com.chartapp.mainboard;
 import android.annotation.SuppressLint;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -61,7 +62,7 @@ public class Mainboard_catalog extends AppCompatActivity {
         MobileAds.initialize(this, new InitializationListener() {
             @Override
             public void onInitializationCompleted() {
-                //Log.d(YANDEX_MOBILE_ADS_TAG, "SDK initialized");
+                Log.d(YANDEX_MOBILE_ADS_TAG, "SDK initialized");
             }
         });
         final AdRequest adRequest = new AdRequest.Builder().build();
