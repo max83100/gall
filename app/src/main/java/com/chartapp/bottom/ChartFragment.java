@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import com.chartapp.R;
 import com.chartapp.laptop.Laptop;
 import com.chartapp.mainboard.Mainboard;
+import com.chartapp.monitors.Monitor;
 import com.chartapp.phones.Phone;
 import com.chartapp.power.Power;
 import com.chartapp.videocard.Videocard;
@@ -47,6 +48,7 @@ public class ChartFragment extends Fragment {
         ImageView welding = view.findViewById(R.id.weldingView);
         ImageView power = view.findViewById(R.id.powersupView);
         ImageView videocard = view.findViewById(R.id.vidrocaardView);
+        ImageView monitors = view.findViewById(R.id.monitorView);
 
         phone.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,6 +94,14 @@ public class ChartFragment extends Fragment {
                 startActivity(intent);
             }
         });
+        monitors.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(getActivity(), Monitor.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 

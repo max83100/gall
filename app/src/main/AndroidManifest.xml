@@ -27,6 +27,12 @@
             android:name=".videocard.Videocard"
             android:exported="false" />
         <activity
+            android:name=".monitors.Monitor"
+            android:exported="false" />
+        <activity
+            android:name=".monitors.Monitor_catalog"
+            android:exported="false" />
+        <activity
             android:name=".videocard.Videocard_catalog"
             android:exported="false" />
 
